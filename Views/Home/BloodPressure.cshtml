@@ -1,0 +1,85 @@
+@model BloodPressureViewModel
+
+@{
+    ViewData["Title"] = "Tansiyon";
+}
+@await Html.PartialAsync("_navbar")
+
+<link rel="stylesheet" href="~/css/BloodPressure.css">
+
+<div class="container my-5">
+    <div class="text-center">
+        <h6 class="display-4">Tansiyon Kayıtları</h6>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="systolic" class="form-label">Systolic (Büyük Tansiyon)</label>
+                        <input type="number" name="Systolic" id="systolic" class="form-control"
+                            placeholder="Büyük tansiyonunuzu girin" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="diastolic" class="form-label">Diastolic (Küçük Tansiyon)</label>
+                        <input type="number" name="Diastolic" id="diastolic" class="form-control"
+                            placeholder="Küçük tansiyonunuzu girin" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notlar</label>
+                        <input type="text" name="Notes" id="notes" class="form-control"
+                            placeholder="Notlarınızı girin" />
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Kaydet</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 mt-5 mt-md-0">
+            <div class="card shadow-lg p-4">
+                <h3 class="card-title">Önceki Sonuçlar</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sistolik</th>
+                            <th>Diyastolik</th>
+                            <th>Ölçüm Zamanı</th>
+                            <th>Notlar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blood-pressure-records">
+                        @foreach (var record in Model.BloodPressureRecords.OrderByDescending(b =>
+                        b.MeasurementTime).Take(3))
+                        {
+                            <tr>
+                                <td>@record.Systolic</td>
+                                <td>@record.Diastolic</td>
+                                <td>@record.MeasurementTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>@record.Notes</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button id="show-more" class="btn btn-primary btn-block">Daha fazla göster</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_footer")
+
+@section Scripts {
+    <script>
+        document.getElementById('show-more').addEventListener('click', function () {
+            var tbody = document.getElementById('blood-pressure-records');
+        @foreach (var record in Model.BloodPressureRecords.OrderByDescending(b => b.MeasurementTime).Skip(3))
+        {
+            <text>
+                        var tr = document.createElement('tr');
+                        tr.innerHTML = '<td>@record.Systolic</td><td>@record.Diastolic</td><td>@record.MeasurementTime.ToString("dd/MM/yyyy HH:mm")</td><td>@record.Notes</td>';
+                        tbody.appendChild(tr);
+            </text>
+        }
+                this.style.display = 'none';
+        });
+    </script>
+}

@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Kardiyovasküler Egzersizler";
+}
+
+@await Html.PartialAsync("_navbar")
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kardiyovasküler Egzersizler</title>
+    <link rel="stylesheet" href="~/css/AllExercises.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="category-title">Kardiyovasküler Egzersizler</h3>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Jumping Jacks</h5>
+                        <p class="card-text">Jumping jacks, vücudu ısıtmak ve kardiyovasküler sistemi çalıştırmak için
+                            harika bir egzersizdir.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xLxV3IiEN8s"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Burpees</h5>
+                        <p class="card-text">Burpees, tüm vücut egzersizi olup kardiyovasküler dayanıklılığı arttırır ve
+                            güç kazandırır.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ujOqcG3U8Ds"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mountain Climbers</h5>
+                        <p class="card-text">Mountain climbers, kardiyovasküler dayanıklılığı arttıran ve birçok kası
+                            çalıştıran bir egzersizdir.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/GcRHKOb2zLI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">High Knees</h5>
+                        <p class="card-text">High knees, kardiyovasküler sağlık ve bacak gücünü arttırmak için etkili
+                            bir egzersizdir.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/d-8p0_hqGqw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("_footer")
+</body>
+
+</html>

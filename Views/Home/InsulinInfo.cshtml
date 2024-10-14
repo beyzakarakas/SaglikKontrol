@@ -1,0 +1,104 @@
+@await Html.PartialAsync("_navbar")
+<link rel="stylesheet" href="~/css/InsulinInfo.css">
+@{
+    ViewData["Title"] = "İnsülin Hakkında Bilgilendirme";
+}
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/insülin1.jpg" class="d-block w-100 carousel-image" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/insülin2.jpg" class="d-block w-100 carousel-image" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/insülin3.jpg" class="d-block w-100 carousel-image" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<div class="big-sizedbox"></div>
+
+<center>
+    <center>
+        <h5>İnsulin Nedir</h5>
+        <p>İnsulin, vücudunuzun enerji elde etmek için glikozu kullanmasına yardımcı olan bir hormondur. <br>Diyabet
+            gibi
+            durumlarda
+            vücut, yeterli miktarda İnsülin üretemez ve bu nedenle dışarıdan İnsülin takviyesi gerekebilir.</p>
+
+        <h5>İnsulin Türleri</h5>
+        <p>Hızlı Etkili İnsülin: Hızla etki eder ve genellikle yemeklerden önce kullanılır.
+            <br> Uzun Etkili İnsülin: Daha
+            uzun
+            süre etki eder ve genellikle gün boyunca kan şekerini kontrol etmek için kullanılır.
+        </p>
+    </center>
+
+    <div class="small-sizedbox"></div>
+
+    <p class="d-inline-flex gap-1">
+        <button class="custom-button" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">İnsulin Kullanımı </button>
+        <button class="custom-button" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
+            aria-expanded="false" aria-controls="multiCollapseExample2">Yan
+            Etkiler</button>
+        <button class="custom-button" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+            aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Her iki ögeyi de
+            değiştir</button>
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    İnsülin, genellikle deri altına enjekte edilir. İnsülin kalem veya şırınga kullanılabilir. Dozaj ve
+                    kullanım şekli
+                    doktorunuz tarafından belirlenmelidir.
+                </div><br>
+                @* <iframe width="560" height="315" src="https://www.youtube.com/embed/4rSTmfPoUnM?si=cwyvI71WOjezYIZM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+                web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> *@
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    İnsülin kullanımı bazı yan etkilere neden olabilir Bunlar arasında düşük kan şekeri, deri
+                    reaksiyonları ve kilo
+                    değişiklikleri bulunabilir. Doktorunuzla herhangi bir sorunuzda iletişime geçmelisiniz.
+                </div><br>
+                @* <iframe width="560" height="315" src="https://www.youtube.com/embed/o-VTpwVkF4c?si=zRBVLHggqjsQHY30"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+                web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> *@
+            </div>
+        </div>
+    </div>
+    <div class="small-sizedbox"></div>
+
+</center>
+
+@await Html.PartialAsync("_footer")

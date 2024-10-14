@@ -1,0 +1,23 @@
+.custom-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 250px;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron {
+    background: #f8f9fa;
+    padding: 2rem 1rem;
+    color: #001a4c;
+}
+
+.container .custom-card {
+    margin-top: 0px;
+}
+
+.custom-card .card-body p.card-text {
+    color: #001a4c;
+}

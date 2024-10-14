@@ -1,0 +1,49 @@
+@model List<Question>
+
+@{
+    ViewData["Title"] = "Diyabet Riski Hesaplama";
+}
+
+@await Html.PartialAsync("_navbar")
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/FindRisc.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <h5>Diyabet riskinizi aşağıdaki formu çözerek öğrenebilirsiniz.</h5>
+        <div class="line"></div>
+        <form asp-action="FindRisc" method="post">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <div class="question">
+                    <h4>@Model[i].QuestionText</h4>
+                    @foreach (var cevap in Model[i].Answers)
+                    {
+                        <input class="radioButtons" type="radio" name="userAnswers[@i].AnswerId" value="@cevap.Id" required />
+                        <label class="answers" for="answer-@cevap.Id">@cevap.AnswerText</label>
+
+                        <br />
+                    }
+                    <input type="hidden" name="userAnswers[@i].QuestionId" value="@Model[i].Id" />
+                </div>
+            }
+            <center>
+                <button type="submit" class="btn btn-primary mt-3">Hesapla</button>
+            </center>
+        </form>
+
+    </div>
+
+    @await Html.PartialAsync("_footer")
+
+</body>
+
+</html>

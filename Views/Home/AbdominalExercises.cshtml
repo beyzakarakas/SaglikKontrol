@@ -1,0 +1,101 @@
+@{
+    ViewData["Title"] = "Karın Egzersizleri";
+}
+
+@await Html.PartialAsync("_navbar")
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karın Egzersizleri</title>
+    <link rel="stylesheet" href="~/css/AllExercises.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="category-title">Karın Egzersizleri</h3>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Plank</h5>
+                        <p class="card-text">Plank, karın ve omurga kaslarını güçlendirmek için etkili bir egzersizdir.
+                        </p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Z1r7iWTF1lw"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sit-ups</h5>
+                        <p class="card-text">Sit-ups, karın kaslarını güçlendiren ve karın bölgesindeki yağ yakımını
+                            arttıran bir egzersizdir.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ok1-h9zqNhU"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Leg Raises</h5>
+                        <p class="card-text">Leg raises, alt karın kaslarını güçlendirmek için etkili bir egzersizdir.
+                        </p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/FZbT-m046Fs"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Russian Twists</h5>
+                        <p class="card-text">Russian twists, karın kaslarını ve yanları güçlendiren bir egzersizdir.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/4i8d0iWMImk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bicycle Crunches</h5>
+                        <p class="card-text">Bicycle crunches, karın kaslarını güçlendiren ve çekirdek stabilitesini
+                            arttıran bir egzersizdir.</p>
+                        <div class="video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hz9q1Ld5qno"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("_footer")
+</body>
+
+</html>

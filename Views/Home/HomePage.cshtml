@@ -1,0 +1,109 @@
+@model DiabetWebSite.Models.ViewModels.HomePageViewModel
+
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/HomePage.css">
+</head>
+@await Html.PartialAsync("_navbar")
+
+<body>
+    <div class="container">
+        <div class="sizedbox"></div>
+        <div class="row">
+                @*! Diyabet Riski *@
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <i class="bi bi-shield-shaded card-icon"></i>
+                            <h5 class="card-title">Diyabet Riski</h5>
+                            @if (Model.LatestFindRiscResult != null)
+                            {
+                                <p>Toplam Risk Puanı: @Model.LatestFindRiscResult.TotalRiskPoints</p>
+                                <p>Risk Derecesi: @Model.LatestFindRiscResult.DegreeOfRisk</p>
+                                <p>10 Yıllık Risk Oranı: @Model.LatestFindRiscResult.TenYearRiskRating</p>
+                                <p>Rutin Tarama: @Model.LatestFindRiscResult.RoutineScreening</p>
+                                <p>Tarih: @Model.LatestFindRiscResult.TestDate.ToString("dd.MM.yyyy HH:mm")</p>
+                            }
+                            else
+                            {
+                                <p>Diyabet riski kaydı bulunamadı.</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                @*! BMI Bilgileri *@
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <i class="bi bi-bar-chart-fill card-icon"></i>
+                            <h5 class="card-title">BMI Bilgileri</h5>
+                            @if (Model.LatestBmi != null)
+                            {
+                                <p>En Son BMI: @Model.LatestBmi.BMICalculated</p>
+                                <p>Boy: @Model.LatestBmi.HeightCm cm</p>
+                                <p>Kilo: @Model.LatestBmi.WeightKg kg</p>
+                                <p>Tarih: @Model.LatestBmi.MeasurementTime.ToString("dd.MM.yyyy HH:mm")</p>
+                            }
+                            else
+                            {
+                                <p>BMI kaydı bulunamadı.</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                @*! Tansiyon Bilgileri *@
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <i class="bi bi-heart card-icon"></i>
+                            <h5 class="card-title">Tansiyon Bilgileri</h5>
+                            @if (Model.LatestBloodPressure != null)
+                            {
+                                <p>En Son Tansiyon:</p>
+                                <p>Sistolik(Büyük Tansiyon): @Model.LatestBloodPressure.Systolic</p>
+                                <p>Diastolik(Küçük Tansiyon): @Model.LatestBloodPressure.Diastolic</p>
+                                <p>Tarih: @Model.LatestBloodPressure.MeasurementTime.ToString("dd.MM.yyyy HH:mm")</p>
+                            }
+                            else
+                            {
+                                <p>Tansiyon kaydı bulunamadı.</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                @*! Kan Şekeri Bilgileri *@
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <i class="bi bi-droplet-half card-icon"></i>
+                            <h5 class="card-title">Kan Şekeri Bilgileri</h5>
+                            @if (Model.LatestBloodSugar != null)
+                            {
+                                <p>En Son Kan Şekeri: @Model.LatestBloodSugar.MeasurementValue</p>
+                                <p>Tarih: @Model.LatestBloodSugar.MeasurementTime.ToString("dd.MM.yyyy HH:mm")</p>
+                            }
+                            else
+                            {
+                                <p>Kan şekeri kaydı bulunamadı.</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("_footer")
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@model DiabetWebSite.Models.ViewModels.UserViewModel
+@await Html.PartialAsync("_navbar")
+
+@{
+    ViewData["Title"] = "Profil";
+}
+
+<link rel="stylesheet" href="~/css/UserInfo.css">
+
+<div class="container profile-page mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card custom-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-lines-fill custom-icon"></i>
+                    <h4 class="card-title mt-3">Merhaba, @Model.Username</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Kullanıcı Adı</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.Username
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Email</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.Email
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Kayıt Olma Tarihi</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.CreatedAt.ToString("dd.MM.yyyy")
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between card-container">
+                        <a href="/Home/ChangePassword">
+                            <button class="custom-button">
+                                <i class="bi bi-arrow-repeat mr-2 change-icon"></i>
+                                Parolayı Değiştir
+                            </button>
+                        </a>
+                        <a href="javascript:void(0);"> <button class="custom-button" onclick="confirmDelete()"><i
+                                    class="fas fa-trash-alt mr-2"></i> Hesabı Sil</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_footer")
+
+<script>
+    function confirmDelete() {
+        if (confirm('Hesabınızı silmek istediğinize emin misiniz?')) {
+            // Silme işlemi için AJAX isteği gönderelim veya doğrudan sayfayı yönlendirelim
+            window.location.href = '/Home/DeleteAccount'; // Silme işlemi yapılacak action'a yönlendirme
+        }
+    }
+</script>

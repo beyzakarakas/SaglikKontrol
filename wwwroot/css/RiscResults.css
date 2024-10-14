@@ -1,0 +1,88 @@
+.page-container {
+    max-width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.page-container h2 {
+    text-align: center;
+    color: #ce4d02;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+.line {
+    border: 2px;
+    background-color: #ce4d02;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.table-titles {
+    text-align: left;
+    padding-right: 10px;
+    list-style-type: none;
+    margin-left: 170px;
+    padding: 0;
+    color: #001a4c;
+    font-size: larger;
+}
+
+.table-value {
+    text-align: right;
+    font-weight: bold;
+    padding-left: 10px;
+    list-style-type: none;
+    margin-right: 170px;
+    padding: 0;
+    font-size: larger;
+    color: #001a4c;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table li {
+    padding: 5px 0;
+}
+
+.btn-primary {
+    height: 50px;
+    width: 40%;
+    background-color: #ce4d02;
+    color: white;
+    transition: 0.6s;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #002d7f;
+    color: white;
+    transition: 0.6s;
+}
+
+@media (max-width: 762px) {
+    .table-titles {
+        margin-left: 10px;
+    }
+    
+    .table-value {
+        margin-right: 10px;
+    }
+    
+}

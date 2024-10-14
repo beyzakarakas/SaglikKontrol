@@ -1,0 +1,66 @@
+@model DiabetWebSite.Models.ViewModels.RiscResultsViewModel
+
+@{
+    ViewData["Title"] = "Diyabet Riski Sonuçları";
+}
+
+@await Html.PartialAsync("_navbar")
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/RiscResults.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <h2>Sonuçlar</h2>
+        <div class="line"></div>
+        <table>
+            <div class="row">
+                <div class="col table-titles">
+                    <li>
+                        <p>Toplam Risk Puanı</p>
+                    </li>
+                    <li>
+                        <p>Risk Derecesi</p>
+                    </li>
+                    <li>
+                        <p>10 Yıllık Risk Oranı</p>
+                    </li>
+                    <li>
+                        <p>Rutin Taramalar</p>
+                    </li>
+                </div>
+                <div class="col table-value">
+                    <li>
+                        <p>@Model.TotalRiskPoints</p>
+                    </li>
+                    <li>
+                        <p>@Model.DegreeOfRisk</p>
+                    </li>
+                    <li>
+                        <p>@Model.TenYearRiskRating</p>
+                    </li>
+                    <li>
+                        <p>@Model.RoutineScreening</p>
+                    </li>
+                </div>
+            </div>
+        </table>
+
+        <center>
+            <a href="@Url.Action("Recommendations")" class="btn btn-primary mt-3">Öneriler</a>
+        </center>
+
+
+    </div>
+
+    @await Html.PartialAsync("_footer")
+
+</body>
+
+</html>

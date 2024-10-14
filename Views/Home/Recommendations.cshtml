@@ -1,0 +1,181 @@
+@{
+    ViewData["Title"] = "Öneriler";
+}
+
+@await Html.PartialAsync("_navbar")
+
+<link rel="stylesheet" href="~/css/Recommendations.css">
+
+<div class="container recommendations-info">
+    <center>
+        <h4>Öneri Rehberi</h4>
+    </center>
+    <section class="diabetes-info">
+        <h5>Diyabet Nedir?</h5>
+        <p>Diyabet, vücudunuzda pankreas adlı salgı bezinin yeterli miktarda insülin hormonu üretmemesi ya da
+            ürettiği insülin hormonunun etkili bir şekilde kullanılamaması durumunda gelişir.
+        </p>
+        <p>Diyabet, ömür boyu süren bir hastalıktır.
+        </p>
+        <p>Sonuç olarak, yediğiniz besinlerden kana geçen şekeri yani glukozu hücreler kullanamaz ve kan şekeri
+            yükselir (hiperglisemi).
+        </p>
+    </section>
+    <section class="diabetes-symptoms">
+        <h5>Diyabet Habercisi!</h5>
+        <p>Diyabeti olmayan bir bireyin kan şekeri düzeyi:
+        </p>
+        <li> Açlık halinde 120 mg/dl,
+        </li>
+        <li>Tokluk halinde (yemeğe başladıktan iki saat sonra) 140 mg/dl ve altındadır.
+        </li>
+    </section>
+    <!-- Diyabet Belirtileri -->
+    <section class="diabetes-diagnosis">
+        <h5>Diyabet Hastası Olduğumu Nasıl Anlarım?</h5>
+        <p>Bir kişinin diyabetli olup olmadığı Açlık Kan Şekeri (AKŞ) ölçümü veya Şeker Yükleme Testi (OGTT)
+            yapılarak saptanır.</p>
+    </section>
+
+    <!-- AKŞ Yorumlama -->
+    <section class="blood-sugar-interpretation">
+        <h5>Diyabet Tanısı Açısından Açlık Kan Şekeri Sonucu Nasıl Yorumlanır?</h5>
+        <p>AKŞ sonucunun 100-120 mg/dl olması gizli şeker (pre-diyabet) sinyalidir.</p>
+        <p>AKŞ ölçüm sonucunun 126 mg/dl veya daha fazla olması diyabetin varlığını gösterir.</p>
+    </section>
+
+    <!-- OGTT Yorumlama -->
+    <section class="ogtt-interpretation">
+        <h5>Diyabet Tanısı Açısından Şeker Yükleme Testi (OGTT) Sonucu Nasıl Yorumlanır?</h5>
+        <p>OGTT’de glukozdan zengin sıvı aldıktan 2 saat sonraki kan şekeri değeri önemlidir.</p>
+        <p>İkinci saat kan şekeri ölçümü 140-199 mg/dl ise gizli şeker, 200 mg/dl veya daha yüksek ise diyabet tanısı
+            konulur.
+        </p>
+    </section>
+
+    <section class="diabetes-test">
+        <h5>Diyabetim Var Mı Yok Mu Testi</h5>
+        <p>Şişman ve 45 yaşın üstünde iseniz pre-diabetli olup olmadığınızı öğrenmek için AKŞ ve OGTT test
+            yaptırmanız önerilir.</p>
+        <p>Eğer vücut ağırlığınız normal ise ve 45 yaş civarında iseniz testi yaptırmanın sizin için uygunluğunu
+            doktorunuza danışınız.</p>
+        <p>45 yaşından genç erişkin ve/veya şişman iseniz diyabet ve pre-diyabet yönünden risk faktörlerine
+            bakılması gerekir.</p>
+        <p>Bu risk faktörleri: yüksek tansiyon, düşük HDL-kolesterol düzeyi, yüksek trigliserid düzeyi, ailede diyabet
+            varlığı, gestasyonel diyabet, 4,5 kg üzerinde bebek doğumu öyküsü olmasıdır.  
+        </p>
+    </section>
+
+    <section class="prediabetes-treatment">
+        <h5>Pre-Diyabet Tedavisi: Risk Faktörlerini Azaltmak</h5>
+        <p>Eğer pre-diabetiniz var ise pre-diyabeti olmayanlara kıyasla kalp hastalığı veya inme riskiniz %50
+            yüksektir.</p>
+        <p>Kardiyovasküler hastalıklarla ilişkili risk faktörlerinizin farkına varmanız gerekir.</p>
+        <p>Eğer risk faktörlerinden birine veya birkaçına sahipseniz bu faktörlerin ortadan kaldırılması/tedavi edilmesi
+            gerekir.
+        </p>
+    </section>
+
+    <section class="exercise-therapy">
+        <h5>Pre-Diyabet Tedavisi: Egzersiz Tedavisi</h5>
+        <p>Haftanın 5 günü günde 30 dakika düzenli yürüyüş şeklinde yapılan egzersiz programı, vücut ağırlığınızın
+            ılımlı olarak azalmasını sağlar.</p>
+    </section>
+
+    <section class="diabetes-management">
+        <h5>Diyabeti Kontrol Altında Tutmanın Temel Adımları</h5>
+        <ul>
+            <li>Findrisk testini yapıp riski tespit etmek</li>
+            <li>Doktora başvurup tahlil yaptırmak</li>
+            <li>Düzenli egzersiz yapmak</li>
+            <li>Diyetisyen kontrolünde sağlıklı ve dengeli beslenmek</li>
+            <li>Sigara, alkol ve stres gibi faktörlerden uzak durmak</li>
+        </ul>
+    </section>
+
+    <section class="pre-diet-tips">
+        <h5>Diyetisyene Gidene Kadar Neler Yapılabilir?</h5>
+        <p>Öncelikle kan şekerinizin hızlı bir şekilde yükselmesine neden olan şeker ve şeker içeren yiyecekler ile
+            kilo almanıza neden olacak yağ ve yağlı yiyecekleri azaltın.</p>
+        <p>Bir veya iki öğün yemek yerine günde en azından üç öğün yemeye çalışın.</p>
+        <p>Diyetisyeninizle görüşmeye gitmeden önceki üç veya beş gün süre boyunca içtiğiniz ve yediğiniz her şeyi
+            not alın.</p>
+    </section>
+
+    <section class="diet-pyramid">
+        <h5>Diyabette Nasıl Beslenilmeli?</h5>
+        <p>Diyabeti olmayan bir kişinin de rafine şeker tüketimini kısıtlaması, doymuş yağ ve kolesterolden zengin
+            olan et, süt, yoğurt, peynir, yumurta gibi yiyecekleri belirli bir miktarda tüketmesi gerekmektedir.</p>
+        <p>Sağlıklı beslenme için karbonhidrat, protein, yağ, vitamin ve mineral, posa gibi besin öğelerini dengeli
+            bir şekilde almak gerekmektedir.</p>
+    </section>
+
+    <section class="unhealthy-foods">
+        <h5>Diyabette Sakıncalı Olan Besinler</h5>
+        <ul>
+            <li>Şeker ve şeker içerikli besinler (bal, reçel, çikolata ve tatlı çeşitleri)</li>
+            <li>Kurabiye, kek, pasta, börek, beyaz undan yapılmış ürünler</li>
+            <li>Yağda kızartılmış yiyecekler</li>
+            <li>Kavurmalar</li>
+            <li>Sakatat çeşitleri</li>
+            <li>Aşırı tuz içeriği barındıran yiyecekler (cips)</li>
+            <li>Salam, sosis, sucuk, pastırma</li>
+        </ul>
+    </section>
+
+    <section class="meal-planning">
+        <h5>Öğün Planı Nasıl Yapılmalıdır?</h5>
+        <p>Öğün planı mutlaka profesyonel bir yardım alınarak yapılmalıdır. Bir diyetisyen eşliğinde nasıl
+            besleneceğinizi öğrenmek en önemli adımdır.</p>
+        <p>Sağlıklı bir birey 3 ana ve 3 ara öğünden oluşan besin düzenini oturtmalıdır.</p>
+    </section>
+
+    @* <section class="food-pyramid">
+    <h5>Beslenme Piramidi</h5>
+    <p>Diyabet Beslenme Piramidi, sizin ve diğer aile bireylerinizin sağlıklı ve dengeli beslenmesini sağlayacak
+    yiyecekleri içermektedir.</p>
+    <p>Ana öğünlerinizde, piramitteki 5 yiyecek grubundan 3 veya 4 farklı grup içinde yer alan yiyecekleri bir
+    araya getirerek öğün planınızı yapabilirsiniz.</p>
+    </section> *@
+    @* <section class="food-pyramid">
+        <h5> Beslenme Piramidi</h5>
+        <center>
+            <img src="~/images/besin_piramidi.png" alt="Beslenme Piramidi" class="img-fluid"
+                style="max-width: 80%; margin-bottom: 20px;" />
+        </center>
+        <p>Diyabet Beslenme Piramidi, sizin ve diğer aile bireylerinizin sağlıklı ve dengeli beslenmesini sağlayacak
+            yiyecekleri içermektedir.</p>
+        <p>Ana öğünlerinizde, piramitteki 5 yiyecek grubundan 3 veya 4 farklı grup içinde yer alan yiyecekleri bir
+            araya getirerek öğün planınızı yapabilirsiniz.</p>
+    </section> *@
+    <section class="food-pyramid">
+    <h5>Beslenme Piramidi</h5>
+    
+    <center>
+        <img src="~/images/besin_piramidi.png" alt="Beslenme Piramidi" class="pyramid-image">
+    </center>
+    
+    <p>Diyabet Beslenme Piramidi, sizin ve diğer aile bireylerinizin sağlıklı ve dengeli beslenmesini sağlayacak
+        yiyecekleri içermektedir.</p>
+    <p>Ana öğünlerinizde, piramitteki 5 yiyecek grubundan 3 veya 4 farklı grup içinde yer alan yiyecekleri bir
+        araya getirerek öğün planınızı yapabilirsiniz.</p>
+</section>
+
+
+
+    <section class="snack-options">
+        <h5>Ara Öğünlerde Neler Tüketilebilir?</h5>
+        <ul>
+            <li>2 galeta</li>
+            <li>4-5 adet şekersiz kepekli bisküvi</li>
+            <li>Bir bardak dolusu yağsız patlamış mısır</li>
+            <li>Yarım poğaça (ev yapımı)</li>
+            <li>Düşük yağlı süt</li>
+            <li>Yoğurt/ayran/peynir</li>
+            <li>Kefir</li>
+            <li>Taze meyve ve sebzeler</li>
+        </ul>
+    </section>
+</div>
+
+@await Html.PartialAsync("_footer")

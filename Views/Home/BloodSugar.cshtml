@@ -1,0 +1,71 @@
+@model DiabetWebSite.Models.ViewModels.BloodSugarViewModel
+
+@{
+    ViewData["Title"] = "Kan Şekeri";
+}
+@await Html.PartialAsync("_navbar")
+
+<link rel="stylesheet" href="~/css/BloodSugar.css">
+
+<div class="container my-5">
+    <div class="text-center">
+        <h6 class="display-4">Kan Şekeri Kayıtları</h6>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="measurementValue" class="form-label">Kan Şekeri</label>
+                        <input type="number" name="NewMeasurementValue" id="measurementValue" class="form-control"
+                            placeholder="Kan şekerinizi girin" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Giriş</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 mt-5 mt-md-0">
+            <div class="card shadow-lg p-4">
+                <h3 class="card-title">Önceki Sonuçlar</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Kan Şekeri</th>
+                            <th>Ölçüm Zamanı</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blood-sugar-records">
+                        @foreach (var record in Model.BloodSugarRecords.OrderByDescending(b =>
+                        b.MeasurementTime).Take(3))
+                        {
+                            <tr>
+                                <td>@record.MeasurementValue</td>
+                                <td>@record.MeasurementTime.ToString("dd/MM/yyyy HH:mm")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button id="show-more" class="btn btn-primary btn-block">Daha fazla göster</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_footer")
+
+@section Scripts {
+    <script>
+        document.getElementById('show-more').addEventListener('click', function () {
+            var tbody = document.getElementById('blood-sugar-records');
+        @foreach (var record in Model.BloodSugarRecords.OrderByDescending(b => b.MeasurementTime).Skip(3))
+        {
+            <text>
+                        var tr = document.createElement('tr');
+                        tr.innerHTML = '<td>@record.MeasurementValue</td><td>@record.MeasurementTime.ToString("dd/MM/yyyy HH:mm")</td>';
+                        tbody.appendChild(tr);
+            </text>
+        }
+                this.style.display = 'none';
+        });
+    </script>
+}

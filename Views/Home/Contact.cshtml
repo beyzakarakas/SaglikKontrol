@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "İletişim";
+}
+
+<link rel="stylesheet" href="~/css/OurServices.css">
+
+<header class="jumbotron text-center">
+    <h1 class="display-4">İletişim</h1>
+    <p class="lead">Bize ulaşın, görüş ve önerilerinizi paylaşın.</p>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Genel İletişim</h5>
+                    <p class="card-text">Genel sorularınız ve iletişim için: <a
+                            href="mailto:genel@saglikkontrol.com">info@saglikkontrol.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Teknik Destek</h5>
+                    <p>İnovasyonun gücüyle tanışın: Web sitelerinde ve mobil uygulamalarda mükemmel kullanıcı deneyimi
+                        sunan çözümlerimizle sizi ileri taşıyoruz.</p>
+                    <p class="card-text">Teknik sorular ve destek için: <a
+                            href="mailto:erenmeral02@gmail.com"><br>erenmeral02@gmail.com</a>
+                        <br><a href="mailto:byzkrks1@gmail.com">byzkrks1@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_footer")
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

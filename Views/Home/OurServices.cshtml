@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Hizmetlerimiz";
+}
+
+<link rel="stylesheet" href="~/css/OurServices.css">
+
+<header class="jumbotron text-center">
+    <h1 class="display-4">Hizmetlerimiz</h1>
+    <p class="lead">Sağlık Kontrol olarak, sağlığınızı en iyi şekilde yönetmenize yardımcı olmak için çeşitli hizmetler
+        sunuyoruz.</p>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Diyabet Riski Hesaplama</h5>
+                    <p class="card-text">Diyabet riski taşıyıp taşımadığınızı öğrenmek için sunduğumuz hesaplama aracı
+                        ile sağlığınız hakkında bilgi sahibi olun. Risk faktörlerinizi belirleyerek, diyabetten korunma
+                        yollarını öğrenebilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Vücut Kitle İndeksini Hesaplama</h5>
+                    <p class="card-text">Sağlıklı bir vücut ağırlığına sahip olup olmadığınızı öğrenmek için Vücut Kitle
+                        İndeksi (VKİ) hesaplama aracımızı kullanın. VKİ, boyunuza ve kilonuza göre ideal vücut
+                        ağırlığınızı belirlemenize yardımcı olur.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Tansiyon</h5>
+                    <p class="card-text">Tansiyon seviyelerinizi takip ederek, kalp ve damar sağlığınızı koruma altına
+                        alın. Tansiyon hakkında bilgilendirici içeriklerimizle, yüksek veya düşük tansiyonun nedenlerini
+                        ve yönetim stratejilerini öğrenin.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Kan Şekeri</h5>
+                    <p class="card-text">Kan şekeri seviyelerinizi izleyerek, diyabet ve diğer sağlık sorunlarından
+                        korunabilirsiniz. Kan şekeri ölçümleri ve yönetimi hakkında detaylı bilgiler sunuyoruz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">İnsülin Hakkında Bilgilendirme</h5>
+                    <p class="card-text">İnsülin hormonunun vücuttaki rolü ve insülin direnci hakkında bilgilendirici
+                        içeriklere ulaşabilirsiniz. İnsülin kullanımı ve yönetimi hakkında kapsamlı rehberlerimizle,
+                        diyabet tedavinizi daha iyi yönetebilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">Egzersizler</h5>
+                    <p class="card-text">Sağlığınızı korumak ve geliştirmek için önerdiğimiz egzersiz programlarıyla
+                        formda kalın. Egzersizlerin faydaları, farklı egzersiz türleri ve egzersiz yaparken dikkat
+                        edilmesi gerekenler hakkında detaylı bilgiler sunuyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@await Html.PartialAsync("_footer")

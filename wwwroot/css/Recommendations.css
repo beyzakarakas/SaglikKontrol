@@ -1,0 +1,43 @@
+.container h3 {
+    margin: 50px 0;
+}
+
+.recommendations-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #ce4d02;
+}
+
+.recommendations-info h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ce4d02;
+}
+
+.recommendations-info section {
+    margin-bottom: 20px;
+}
+
+.recommendations-info h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ce4d02;
+}
+
+.recommendations-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.recommendations-info ul li {
+    margin-bottom: 10px;
+    color: #001a4c;
+}
+
+.pyramid-image {
+    max-width: 50%;
+    height: 30%;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
